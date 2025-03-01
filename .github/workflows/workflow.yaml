@@ -7,6 +7,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Print Hello from Hexlet
+        uses: hexlet-components/hello-from-hexlet-action@release
+
       - name: Setup environment
         run: make setup
 
