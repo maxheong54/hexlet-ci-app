@@ -4,7 +4,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps: 
-      -uses: actions/checkout@v4
-      -run: make setup
-      -run: make test
-      -run: make lint
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup environment
+        run: make setup
+
+      - name: Run tests
+        run: make test
+
+      - name: Run lint
+        run: make lint
